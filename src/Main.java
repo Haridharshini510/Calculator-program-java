@@ -2,19 +2,40 @@ import java.util.Scanner;
 import java.util.Random;
 public class Main {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        Random ran = new Random();
-        int choice = ran.nextInt(1,10);
-        int guess;
-        do {
-            System.out.println("Enter a number from 1 -10");
-            guess = scn.nextInt();
-        } while (guess < 1 || guess > 10);
-        if(choice==guess){
-            System.out.printf("Computer chose %d and you chose %d too!! :)",choice,guess);
-        }
-        else{
-            System.out.printf("Computer chose %d but you chose %d :(",choice,guess);
-        }
+        public class Main {
+            public static void main(String[] args) {
+                Scanner scn = new Scanner(System.in);
+
+                System.out.println("Enter number 1: ");
+                double num1 = scn.nextDouble();
+
+                System.out.println("Enter operation: ");
+                char op = scn.next().charAt(0);
+
+                System.out.println("Enter number 2: ");
+                double num2 = scn.nextDouble();
+
+                double result = 0;
+                boolean isPossible = true;
+
+                switch (op) {
+                    case '+' -> result = num1 + num2;
+                    case '-' -> result = num1 - num2;
+                    case '*' -> result = num1 * num2;
+                    case '/' -> {
+                        if (num2 == 0) {
+                            System.out.println("not possible");
+                            isPossible = false;
+                        } else {
+                            result = num1 / num2;
+                        }
+                    }
+                    case '%' -> result = num1 % num2;
+                    default -> {
+                        System.out.println("Invalid choice!!");
+                        isPossible = false;
+                    }
+                }
+            }
     }
 }
