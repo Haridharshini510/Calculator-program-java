@@ -2,8 +2,6 @@ import java.util.Scanner;
 import java.util.Random;
 public class Main {
     public static void main(String[] args) {
-        public class Main {
-            public static void main(String[] args) {
                 Scanner scn = new Scanner(System.in);
 
                 System.out.println("Enter number 1: ");
@@ -38,4 +36,4 @@ public class Main {
                 }
             }
     }
-}
+
